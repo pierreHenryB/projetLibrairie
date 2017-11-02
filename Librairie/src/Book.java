@@ -8,6 +8,7 @@ public class Book {
 	private String autor;
 	//private Date release;
 	
+	public Book() {};
 	public Book(String pId, String pIsbn, String pName, String pAutor){
 		
 		this.id = pId;
