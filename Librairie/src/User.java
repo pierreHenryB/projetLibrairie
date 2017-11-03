@@ -76,16 +76,4 @@ public class User {
 	public void setAdress(String adress) {
 		this.adress = adress;
 	}
-	
-	/**
-	    * Borrow a book from the library
-	    *
-	    * @param id the id of the borrowed book
-	    * @param username the name of the user
-	    * @throws BookNotFoundException if no book in the library has the given id
-	    * @throws UnavailableBookException if all books in the library with the given id
-	    have been borrowed
-	    */
-	    void borrowBook(String id, String username) throws BookNotFoundException,
-	    UnavailableBookException;
 }

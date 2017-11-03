@@ -1,52 +1,52 @@
-import java.util.Date;
-
 public class Book {
 	
 	private String id;
-	private String isbn;
-	private String name;
-	private String autor;
-	//private Date release;
+	private String isbn10;
+	private String isbn13;
+	private String title;
+	private String author;
+	
+	//instancier list book 
 	
 	public Book() {};
-	public Book(String pId, String pIsbn, String pName, String pAutor){
+	public Book(String id, String isbn10, String isbn13, String title, String author){
 		
-		this.id = pId;
-		this.isbn = pIsbn;
-		this.name = pName;
-		this.autor = pAutor;
+		this.id = id;
+		this.isbn10 = isbn10;
+		this.isbn10 = isbn13;
+		this.title = title;
+		this.author = author;
 		
 	}
 	public String getId() {
 		return this.id;
 	}
-	public void setId(String pId) {
-		this.id = pId;
+	public void setId(String id) {
+		this.id = id;
 	}
-	public String getIsbn() {
-		return this.isbn;
+	public String getIsbn10() {
+		return this.isbn10;
 	}
-	public void setIsbn(String pIsbn) {
-		this.isbn = pIsbn;
+	public void setIsbn10(String isbn10) {
+		this.isbn10 = isbn10;
 	}
-	public String getName() {
-		return this.name;
+	public String getIsbn13() {
+		return this.isbn13;
 	}
-	public void setName(String pName) {
-		this.name = pName;
+	public void setIsbn13(String isbn13) {
+		this.isbn10 = isbn13;
 	}
-	public String getAutor() {
-		return this.autor;
+	public String getTitle() {
+		return this.title;
 	}
-	public void setAutor(String pAutor) {
-		this.autor = pAutor;
+	public void setTitle(String title) {
+		this.title = title;
 	}
-
-
-	/*public void setRelease(Date pRelease) {
-		this.release = pRelease;
-	}*/
-
-	
+	public String getAuthor() {
+		return this.author;
+	}
+	public void setAuthor(String author) {
+		this.author = author;
+	}
 
 }
