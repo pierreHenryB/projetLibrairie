@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class Book {
 	
 	private String id;
@@ -5,7 +7,7 @@ public class Book {
 	private String isbn13;
 	private String title;
 	private String author;
-	
+	private List<Book> bookAvailable;
 	//instancier list book 
 	
 	public Book() {};
@@ -13,7 +15,7 @@ public class Book {
 		
 		this.id = id;
 		this.isbn10 = isbn10;
-		this.isbn10 = isbn13;
+		this.isbn13 = isbn13;
 		this.title = title;
 		this.author = author;
 		
@@ -34,7 +36,7 @@ public class Book {
 		return this.isbn13;
 	}
 	public void setIsbn13(String isbn13) {
-		this.isbn10 = isbn13;
+		this.isbn13 = isbn13;
 	}
 	public String getTitle() {
 		return this.title;
@@ -47,6 +49,12 @@ public class Book {
 	}
 	public void setAuthor(String author) {
 		this.author = author;
+	}
+	public List<Book> getBookAvailable() {
+		return bookAvailable;
+	}
+	public void setBookAvailable(List<Book> bookAvailable) {
+		this.bookAvailable = bookAvailable;
 	}
 
 }

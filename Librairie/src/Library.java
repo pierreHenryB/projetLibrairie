@@ -4,7 +4,6 @@ public class Library implements InterfaceLibrary{
 	
 	List <Book> BookAvailable = new ArrayList<Book>();
     Book book1 = new Book("1" ,"123465","123456789123", "Wololo", "Trul"); 
-    
     /**
     * Add a book with the given ISBN
     *
@@ -25,11 +24,8 @@ public class Library implements InterfaceLibrary{
         			return Optional.ofNullable(BookAvailable.get(i).getId());
         		}
         	}
-    	}
-    	
-    	BookAvailable.add();
-    	return Optional.ofNullable(null);
-    		    	
+    	}   	
+    	return Optional.ofNullable(null);    		    	
     };
     		
 		
@@ -48,50 +44,36 @@ public class Library implements InterfaceLibrary{
 	    		}
 	    	}
 	    	return Optional.ofNullable(TheBook);
-	    }
+	    };
 
-	    /**
-	    * Borrow a book from the library
-	    *
-	    * @param id the id of the borrowed book
-	    * @param username the name of the user
-	    * @throws BookNotFoundException if no book in the library has the given id
-	    * @throws UnavailableBookException if all books in the library with the given id
-	    have been borrowed
-	    */
-	    public void borrowBook(String id, String username) throws BookNotFoundException,
-	    UnavailableBookException{
-	    	try {
+		/**
+		* Borrow a book from the library
+		*
+		* @param id the id of the borrowed book
+		* @param username the name of the user
+		* @throws LibraryException the book cannot be borrowed
+		*/
+		public void borrowBook(String id, String username) throws LibraryException{
+			try {
 				
-			}catch(BookNotFoundException e){
+			}catch(LibraryException e){
 				
 			}
-	    	catch(UnavailableBookException e){
+		};
+		/**
+		* Return a book back to the library
+		*
+		* @param id the id of the book to borrow
+		* @param username the name of the user
+		* @throws LibraryException if the book cannot be returned
+		*/
+		public void returnBook(String id, String username) throws LibraryException{
+			try {
+				
+			}catch(LibraryException e){
 				
 			}
-	    	
-	    };
-	    
-	    /**
-	    * Return a book back to the library
-	    *
-	    * @param id the id of the book to borrow
-	    * @param username the name of the user
-	    * @throws BookNotFoundException if no book in the library has the given id
-	    * @throws AllBooksAlreadyReturnedException if all books with the given id are
-	    already returned
-	    */
-	    public void returnBook(String id, String username) throws BookNotFoundException,
-	    AllBooksAlreadyReturnedException{
-	    	try {
-				
-			}catch(BookNotFoundException e){
-				
-			}
-	    	catch(AllBooksAlreadyReturnedException e){
-				
-			}
-	    };
+		};
 	    
 	    /**
 	    * Get all books of the library

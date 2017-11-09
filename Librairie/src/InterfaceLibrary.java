@@ -21,27 +21,20 @@ public interface InterfaceLibrary {
 	*
 	* @param id the id of the borrowed book
 	* @param username the name of the user
-	* @throws BookNotFoundException if no book in the library has the given id
-	* @throws UnavailableBookException if all books in the library with the given id
-	have been borrowed
+	* @throws LibraryException the book cannot be borrowed
 	*/
-	void borrowBook(String id, String username) throws BookNotFoundException,
-	UnavailableBookException;
+	void borrowBook(String id, String username) throws LibraryException;
 	/**
 	* Return a book back to the library
 	*
 	* @param id the id of the book to borrow
 	* @param username the name of the user
-	* @throws BookNotFoundException if no book in the library has the given id
-	* @throws AllBooksAlreadyReturnedException if all books with the given id are
-	already returned
+	* @throws LibraryException if the book cannot be returned
 	*/
-	void returnBook(String id, String username) throws BookNotFoundException,
-	AllBooksAlreadyReturnedException;
+	void returnBook(String id, String username) throws LibraryException;
 	/**
 	* Get all books of the library
 	*
-
 	* @return the books
 	*/
 	List<Book> getBooks();
